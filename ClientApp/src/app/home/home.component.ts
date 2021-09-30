@@ -10,7 +10,7 @@ export class HomeComponent {
   public productslist: Products[];
 
   constructor(private router: Router, private homeService: HomeService) {
-    this.homeService.getProducts().subscribe(result => {
+    this.homeService.listProducts().subscribe(result => {
       this.productslist = result["ProductList"];
     }, error => console.error(error));
   }

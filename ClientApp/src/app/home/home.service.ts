@@ -10,7 +10,7 @@ export class HomeService {
     this._baseUrl = baseUrl;
   }
 
-  getProducts() {
+  listProducts() {
     return this.http.get(this._baseUrl + 'api/products');
   }
 
