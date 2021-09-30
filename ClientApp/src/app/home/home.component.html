@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Products List</h1>
+
+<p>This component demonstrates fetching product data from the server WebAPI.</p>
+
+<p *ngIf="!productslist"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="productslist">
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productslist">
+      <td>{{ product.productId }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.stock }}</td>
+      <td>{{ product.image }}</td>
+    </tr>
+  </tbody>
+</table>
